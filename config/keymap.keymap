@@ -117,7 +117,7 @@
                 &trans  &trans  &kp LS(LC(TAB))  &kp UP_ARROW  &kp LC(TAB)  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END  &trans  &trans  &kp TAB  &kp LA(LEFT)  &kp LA(RIGHT)  &trans  &trans  &trans
                 &trans  &kp LEFT_SHIFT  &kp LS(LG(LEFT_ARROW))  &trans  &kp LS(LG(RIGHT_ARROW))  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_WIN  &kp LEFT_ALT  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT_WIN  &kp LEFT_ALT  &trans  &trans  &trans  &trans  &trans
             >;
         };
 

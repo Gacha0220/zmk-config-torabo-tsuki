@@ -29,6 +29,8 @@ CPIと倍率は同時に変更せず、まず既定CPI・1:1を実機基準と�
 同日の実機確認で、SCROLL層は横方向が意図どおり、縦方向だけ逆だった。カーソル層はXY反転のまま維持し、SCROLL層のみX反転へ変更して縦方向を反転させた。
 
 右親指位置の確定後、ARROW層に旧位置対応が残っていたため、LWinをposition 59、LAltをposition 60へ移動した。エディタ案およびSVGは既にこの実位置順だった。
+
+Backspaceのキーリピートを妨げないよう、FUNCTION層への長押し遷移をBackspaceからEnterへ移した。DEFAULT層はEnter長押しFUNCTION、Backspace単機能とし、FUNCTION層内に置いていた補助Backspaceは削除した。
 - S＋D＝Tab、D＋F＝Shift＋Tab
 - BT0〜BT4、BT clear、BT clear all、bootloader
 

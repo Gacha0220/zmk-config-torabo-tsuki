@@ -1,0 +1,57 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    torabo_tsuki_lp_xs_layout: torabo_tsuki_lp_xs_layout {
+        compatible = "zmk,physical-layout";
+        display-name = "torabo-tsuki LP XS (right trackball)";
+
+        keys
+            //                    w   h     x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0   60       0     0     0>
+            , <&key_physical_attrs 100 100  100   25       0     0     0>
+            , <&key_physical_attrs 100 100  200    0       0     0     0>
+            , <&key_physical_attrs 100 100  300   13       0     0     0>
+            , <&key_physical_attrs 100 100  400   25       0     0     0>
+            , <&key_physical_attrs 100 100  950   25       0     0     0>
+            , <&key_physical_attrs 100 100 1050   13       0     0     0>
+            , <&key_physical_attrs 100 100 1150    0       0     0     0>
+            , <&key_physical_attrs 100 100 1250   25       0     0     0>
+            , <&key_physical_attrs 100 100 1350   60       0     0     0>
+
+            , <&key_physical_attrs 100 100    0  160       0     0     0>
+            , <&key_physical_attrs 100 100  100  125       0     0     0>
+            , <&key_physical_attrs 100 100  200  100       0     0     0>
+            , <&key_physical_attrs 100 100  300  113       0     0     0>
+            , <&key_physical_attrs 100 100  400  125       0     0     0>
+            , <&key_physical_attrs 100 100  950  125       0     0     0>
+            , <&key_physical_attrs 100 100 1050  113       0     0     0>
+            , <&key_physical_attrs 100 100 1150  100       0     0     0>
+            , <&key_physical_attrs 100 100 1250  125       0     0     0>
+            , <&key_physical_attrs 100 100 1350  160       0     0     0>
+
+            , <&key_physical_attrs 100 100    0  260       0     0     0>
+            , <&key_physical_attrs 100 100  100  225       0     0     0>
+            , <&key_physical_attrs 100 100  200  200       0     0     0>
+            , <&key_physical_attrs 100 100  300  213       0     0     0>
+            , <&key_physical_attrs 100 100  400  225       0     0     0>
+            , <&key_physical_attrs 100 100  500  240       0     0     0>
+            , <&key_physical_attrs 100 100  850  240       0     0     0>
+            , <&key_physical_attrs 100 100  950  225       0     0     0>
+            , <&key_physical_attrs 100 100 1050  213       0     0     0>
+            , <&key_physical_attrs 100 100 1150  200       0     0     0>
+            , <&key_physical_attrs 100 100 1250  225       0     0     0>
+            , <&key_physical_attrs 100 100 1350  260       0     0     0>
+
+            , <&key_physical_attrs 100 100    0  360       0     0     0>
+            , <&key_physical_attrs 100 100  100  325       0     0     0>
+            , <&key_physical_attrs 100 100  200  300       0     0     0>
+            , <&key_physical_attrs 100 100  315  350       0     0     0>
+            , <&key_physical_attrs 100 100  420  350    1000   420   450>
+            , <&key_physical_attrs 100 100  522  371    2000   522   471>
+            , <&key_physical_attrs 100 100  928  371   -2000  1028   471>
+            , <&key_physical_attrs 100 100 1030  350   -1000  1130   450>
+            , <&key_physical_attrs 100 100 1250  325       0     0     0>
+            , <&key_physical_attrs 100 100 1350  360       0     0     0>
+            ;
+    };
+};

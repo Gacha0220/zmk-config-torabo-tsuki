@@ -87,7 +87,7 @@
                 &none  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &lt 5 I  &kp O  &kp P  &none
                 &none  &kp A  &kp S  &kp D  &kp F  &kp G  &none  &none  &kp H  &kp J  &kp K  &kp L  &kp MINUS  &none
                 &none  &mt LEFT_SHIFT Z  &kp X  &kp C  &kp V  &kp B  &kp DELETE  &kp ESCAPE  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH  &none
-                &none  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 CAPSLOCK  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN  &none  &lt 1 BACKSPACE  &kp ENTER  &none  &kp APOS  &kp SEMICOLON  &none
+                &none  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 CAPSLOCK  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN  &kp ENTER  &lt 1 BACKSPACE  &none  &none  &kp APOS  &kp SEMICOLON  &none
             >;
         };
 

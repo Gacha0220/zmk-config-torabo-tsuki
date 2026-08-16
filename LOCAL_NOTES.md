@@ -25,6 +25,8 @@ CPIと倍率は同時に変更せず、まず既定CPI・1:1を実機基準と�
 ### 右親指の実位置
 
 2026-08-16、positions 59〜62を数字1〜4へ置換した診断ファームで実機確認した結果、Enter側はposition 59、Backspace側はposition 60だった。右トラックボール構成で欠ける位置はposition 61 / SW68とposition 62 / SW67であり、主レイヤーはposition 59をEnter、position 60をBackspace長押しFUNCTIONとしている。
+
+同日の実機確認で、SCROLL層は横方向が意図どおり、縦方向だけ逆だった。カーソル層はXY反転のまま維持し、SCROLL層のみX反転へ変更して縦方向を反転させた。
 - S＋D＝Tab、D＋F＝Shift＋Tab
 - BT0〜BT4、BT clear、BT clear all、bootloader
 

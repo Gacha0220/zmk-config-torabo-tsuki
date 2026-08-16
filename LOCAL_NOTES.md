@@ -32,3 +32,10 @@ CPIと倍率は同時に変更せず、まず既定CPI・1:1を実機基準と�
 - `torabo_tsuki_lp_left_peripheral`
 
 このPCには2026-08-16時点で`west`、CMake、Ninja、Dockerがないため、ローカルビルドは未実施。リポジトリをGitHubへ置き、既存のGitHub Actionsを実行して構文・依存関係を検証する。
+
+## 初回ビルド
+
+2026-08-16、GitHub Actions run 31946798812で全ビルドに成功。成果物は`artifacts/20260816-initial/`へ取得した。右トラックボール構成で書き込むファイルは次の2個。
+
+- `artifacts/20260816-initial/torabo_tsuki_lp_right_central.uf2`
+- `artifacts/20260816-initial/torabo_tsuki_lp_left_peripheral.uf2`

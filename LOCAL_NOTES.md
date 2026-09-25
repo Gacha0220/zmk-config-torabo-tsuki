@@ -49,3 +49,16 @@ Backspaceのキーリピートを妨げないよう、FUNCTION層への長押し
 
 - `artifacts/20260816-initial/torabo_tsuki_lp_right_central.uf2`
 - `artifacts/20260816-initial/torabo_tsuki_lp_left_peripheral.uf2`
+
+## 現在の保存済み最新版（2026-08-16 23:39）
+
+初版以降の親指位置、スクロール方向、ARROW層、Enter長押しFUNCTIONの修正を含む最終ビルドは`artifacts/20260816-enter-function/`に保存した。右トラックボール構成へ書き込むのは次の2ファイル。`double_ball`、`left_central`、`right_peripheral`、`settings_reset`は通常の左右構成用ではない。
+
+- 右側：`artifacts/20260816-enter-function/torabo_tsuki_lp_right_central.uf2`
+- 左側：`artifacts/20260816-enter-function/torabo_tsuki_lp_left_peripheral.uf2`
+
+## 2台目のBluetooth表示名
+
+`build.yaml`に、従来のビルドと併存する`torabo-tsuki2`専用の右Central／左Peripheralビルドを追加した。2台目だけに書き込む。UF2は未生成であり、ビルド成功と実機反映は未確認。
+
+ZMKはBluetooth名を保存設定に保持するため、名称変更後は2台目の左右両側の設定を初期化し、ホスト側で旧ペアリングを削除して再ペアリングする必要がある。初号機の設定は消さない。

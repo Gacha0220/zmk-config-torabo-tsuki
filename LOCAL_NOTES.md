@@ -59,6 +59,10 @@ Backspaceのキーリピートを妨げないよう、FUNCTION層への長押し
 
 ## 2台目のBluetooth表示名
 
-`build.yaml`に、従来のビルドと併存する`torabo-tsuki2`専用の右Central／左Peripheralビルドを追加した。2台目だけに書き込む。UF2は未生成であり、ビルド成功と実機反映は未確認。
+`build.yaml`に、従来のビルドと併存する`torabo-tsuki2`専用の右Central／左Peripheralビルドを追加した。2台目だけに書き込む。GitHub Actions [run 36155889739](https://github.com/Gacha0220/zmk-config-torabo-tsuki/actions/runs/36155889739)で全ジョブ成功。成果物は`artifacts/20260926-torabo-tsuki2/`に取得し、専用UF2のバイナリ中に`torabo-tsuki2`の文字列があることを確認した。実機への反映は未確認。
 
-ZMKはBluetooth名を保存設定に保持するため、名称変更後は2台目の左右両側の設定を初期化し、ホスト側で旧ペアリングを削除して再ペアリングする必要がある。初号機の設定は消さない。
+- 右側：`artifacts/20260926-torabo-tsuki2/torabo_tsuki2_lp_right_central.uf2`
+- 左側：`artifacts/20260926-torabo-tsuki2/torabo_tsuki2_lp_left_peripheral.uf2`
+- 設定初期化：`artifacts/20260926-torabo-tsuki2/settings_reset-bmp_boost-zmk.uf2`
+
+ZMKはBluetooth名を保存設定に保持するため、名称変更には2台目の左右両側へ設定初期化UF2を書き込み、その後に各側の専用UF2を書き込む。ホスト側で旧ペアリングを削除して再ペアリングする必要がある。初号機の設定は消さない。

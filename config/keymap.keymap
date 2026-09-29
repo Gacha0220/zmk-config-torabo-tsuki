@@ -105,7 +105,7 @@
         jis_minus: jis_minus {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp LS(NON_US_BACKSLASH)>;
+            bindings = <&kp MINUS>, <&kp LS(INT_RO)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
         jis_quote: jis_quote {
@@ -141,7 +141,7 @@
         jis_backslash: jis_backslash {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp NON_US_BACKSLASH>, <&kp LS(INT_YEN)>;
+            bindings = <&kp INT_RO>, <&kp LS(INT_YEN)>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
 
@@ -208,7 +208,7 @@
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &jis_minus  &trans  &trans  &trans  &kp LS(SEMICOLON)  &jis_caret  &trans  &kp LS(RIGHT_BRACKET)  &kp LS(BACKSLASH)  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &kp LS(APOS)  &trans  &trans  &trans  &kp LS(EQUAL)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &jis_equal  &kp LS(NON_US_BACKSLASH)  &kp LS(NUMBER_6)  &jis_at  &kp RIGHT_BRACKET  &kp BACKSLASH  &jis_backslash  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &jis_equal  &kp LS(INT_RO)  &kp LS(NUMBER_6)  &jis_at  &kp RIGHT_BRACKET  &kp BACKSLASH  &jis_backslash  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(INT_YEN)  &trans
             >;
         };

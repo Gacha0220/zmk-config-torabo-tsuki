@@ -14,7 +14,9 @@
 #define ARROW 5
 #define MOUSE 6
 #define SCROLL 7
-#define BT 8
+#define MMO 8
+#define MMO_ITEMS 9
+#define BT 10
 
 &mt {
     flavor = "balanced";
@@ -38,6 +40,14 @@
         <&zip_xy_scaler 1 1>,
         <&zip_temp_layer MOUSE 700>;
 
+    /* MMO中はマウスレイヤーの自動切替を行わない。 */
+    mmo_mode {
+        layers = <MMO MMO_ITEMS>;
+        input-processors =
+            <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+            <&zip_xy_scaler 1 1>;
+    };
+
     scroll_mode {
         layers = <SCROLL>;
         input-processors =
@@ -59,11 +69,13 @@
         compatible = "zmk,combos";
 
         tab {
+            layers = <DEFAULT JIS_BASE FUNCTION NUM JIS_NUM ARROW MOUSE SCROLL BT>;
             bindings = <&kp TAB>;
             key-positions = <26 27>;
         };
 
         shift_tab {
+            layers = <DEFAULT JIS_BASE FUNCTION NUM JIS_NUM ARROW MOUSE SCROLL BT>;
             bindings = <&kp LS(TAB)>;
             key-positions = <27 28>;
         };
@@ -243,10 +255,30 @@
             >;
         };
 
+        mmo_layer {
+            bindings = <
+                &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none
+                &none  &kp ESCAPE  &none  &none  &kp I  &kp M  &none  &none  &none  &none  &none  &none
+                &none  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp C  &none  &none  &none  &none  &none  &none  &none  &none
+                &none  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp Q  &kp V  &none  &none  &none  &none  &none  &none  &none
+                &none  &kp E  &kp TAB  &kp SPACE  &kp LEFT_SHIFT  &mo MMO_ITEMS  &kp LEFT_ALT  &to DEFAULT  &none  &none  &none  &none  &none  &none
+            >;
+        };
+
+        mmo_items_layer {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &kp F5  &kp F6  &kp F7  &kp F8  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
         bt_layer {
             bindings = <
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &select_host 0 DEFAULT  &select_host 1 DEFAULT  &select_host 2 JIS_BASE  &select_host 3 DEFAULT  &select_host 4 DEFAULT  &trans
+                &trans  &to MMO  &to DEFAULT  &trans  &trans  &trans  &select_host 0 DEFAULT  &select_host 1 DEFAULT  &select_host 2 JIS_BASE  &select_host 3 DEFAULT  &select_host 4 DEFAULT  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans  &trans  &trans  &bt BT_CLR  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &clear_all_us  &trans
